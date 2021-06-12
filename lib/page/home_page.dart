@@ -17,7 +17,7 @@ class HomePage extends StatelessWidget{
             bottom: TabBar(
               indicator: BoxDecoration(
                 borderRadius: BorderRadiusDirectional.circular(40),
-                color: Colors.yellow,
+                color: Colors.yellow[700],
               ),
               isScrollable: true,
               tabs: [
@@ -29,7 +29,9 @@ class HomePage extends StatelessWidget{
               ],
             ),
           ),
-          body: Container(),
+          body: Container(
+            margin: EdgeInsets.only(top: 5),
+          ),
         ),
       ),
     );

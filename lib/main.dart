@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pr_mobile_test/page/home_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -12,10 +13,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Colors.black, 
       ),
-      home: Container(
-        width: double.infinity,
-        child: Text('КУКУ'),
-      ),
+      home: HomePage(),
     );
   }
 }
