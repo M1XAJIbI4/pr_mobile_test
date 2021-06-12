@@ -17,13 +17,18 @@ class HomePage extends StatelessWidget{
             leading: Icon(Icons.arrow_back_rounded),
             actions: [Icon(Icons.info_outline_rounded)],
             bottom: TabBar(
+              //labelColor: Colors.grey[500],
+              labelStyle: TextStyle(
+                color: Colors.grey[850],
+                fontSize: 17,
+              ),
               indicator: BoxDecoration(
                 borderRadius: BorderRadiusDirectional.circular(40),
                 color: Colors.yellow[700],
               ),
               isScrollable: true,
               tabs: [
-                Tab(text: 'Популярные блюда',),
+                Tab(text: 'Популярные блюда', ),
                 Tab(text: 'Комбо',),
                 Tab(text: 'Креветки',),
                 Tab(text: 'Пицца',),

@@ -52,12 +52,13 @@ class ProductItem extends StatelessWidget{
   //наименование продукта
   Widget buildTitle() {
     return Container(
-      padding: EdgeInsets.only(left: 10),
-      alignment: Alignment.centerLeft,
+      padding: EdgeInsets.only(left: 10, top: 10,),
+      alignment: Alignment.topLeft,
       color: Colors.grey[700],
       child: Text(
         title,
         style: TextStyle(
+          fontSize: 16,
           color: Colors.white,
         ),
       ),
@@ -80,6 +81,7 @@ class ProductItem extends StatelessWidget{
           '$price Р',
             style: TextStyle(
             color: Colors.white,
+            fontSize: 16,
         ),
       ),
     );

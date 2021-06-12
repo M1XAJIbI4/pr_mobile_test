@@ -11,6 +11,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Бургер Кинг',
       theme: ThemeData(
+        textTheme: TextTheme(
+          title: TextStyle(
+            fontSize: 40
+          ),
+        ),
         primaryColor: Colors.black, 
       ),
       home: HomePage(),
