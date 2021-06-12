@@ -78,10 +78,10 @@ class ProductItem extends StatelessWidget{
           ),
         ),
         child: Text(
-          '$price Р',
+          '$price ₽',
             style: TextStyle(
             color: Colors.white,
-            fontSize: 16,
+            fontSize: 16, 
         ),
       ),
     );
