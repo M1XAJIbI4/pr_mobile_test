@@ -3,45 +3,84 @@ import 'package:flutter/material.dart';
 class ProductItem extends StatelessWidget{
   final String title;
   final String price;
-  final String puthImg;
+  final String pathImg;
 
-  ProductItem(this.title, this.price, this.puthImg);
+  ProductItem(this.title, this.price, this.pathImg);
 
   @override 
   Widget build(BuildContext context) {
     return Container(
-      //margin: const EdgeInsets.all(5),
+      margin: const EdgeInsets.all(5),
       child: Column(
         children: [
           //картинка продукта
           Expanded(
             flex: 3,
-            child: Container(
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(20),
-                  topRight: Radius.circular(20),
-                ),
-              ),
-              child: Center(
-                child: Text('Картинка еды'),
-              )
-            ),
+            child: buildPage(),
           ),
           //Наименование продукта
           Expanded(
             flex: 1,
-            child: Container(
-              padding: EdgeInsets.only(left: 10),
-              alignment: Alignment.centerLeft,
-              color: Colors.grey[700],
-            ),
+            child: buildTitle(),
           ),
           //цена продукта
-          Expanded(),
-
+          Expanded(
+            flex: 1,
+            child: buildPrice(),
+          )
         ],
+      ),
+    );
+  }
+
+  // построить картинку
+  Widget buildPage() {
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(20),
+          topRight: Radius.circular(20),
+        ),
+      ),
+      child: Image.asset(
+        pathImg,
+      ),
+    );
+  }
+
+  //наименование продукта
+  Widget buildTitle() {
+    return Container(
+      padding: EdgeInsets.only(left: 10),
+      alignment: Alignment.centerLeft,
+      color: Colors.grey[700],
+      child: Text(
+        title,
+        style: TextStyle(
+          color: Colors.white,
+        ),
+      ),
+    );
+  }
+
+  //цена продукта
+  Widget buildPrice() {
+    return Container(
+        padding: EdgeInsets.only(left: 10),
+        alignment: Alignment.centerLeft,
+        decoration: BoxDecoration(
+          color: Colors.grey[700],
+          borderRadius: BorderRadius.only(
+            bottomLeft: Radius.circular(20),
+            bottomRight: Radius.circular(20),
+          ),
+        ),
+        child: Text(
+          '$price Р',
+            style: TextStyle(
+            color: Colors.white,
+        ),
       ),
     );
   }

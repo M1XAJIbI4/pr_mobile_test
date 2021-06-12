@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pr_mobile_test/page/product_screen.dart';
 
 class HomePage extends StatelessWidget{
   
@@ -8,6 +9,7 @@ class HomePage extends StatelessWidget{
       child: DefaultTabController(
         length: 5,
         child: Scaffold(
+          backgroundColor: Colors.black,
           appBar: AppBar(
             title: Center(
               child: Text('Бургер Кинг'),
@@ -31,6 +33,7 @@ class HomePage extends StatelessWidget{
           ),
           body: Container(
             margin: EdgeInsets.only(top: 5),
+            child: ProductScreen(),
           ),
         ),
       ),
